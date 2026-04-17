@@ -1,0 +1,42 @@
+﻿<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yacht Shop</title>
+
+    <!-- 🕊️ Фавиконка: чайка -->
+    <!-- Относительный путь (для localhost и корректных браузеров) -->
+    <link rel="icon" type="image/webp" sizes="32x32" href="seagull.webp" />
+    <link rel="icon" type="image/webp" sizes="16x16" href="seagull.webp" />
+
+    <!-- ✅ Абсолютный путь (для GitHub Pages с поддиректорией /yacht-spa/) -->
+    <link rel="icon" type="image/webp" href="/yacht-spa/seagull.webp" />
+
+    <!-- 🕊️ JS-фолбэк: принудительно подключает иконку на GitHub Pages -->
+    <script>
+      ;(function () {
+        if (location.hostname.includes('github.io')) {
+          const link = document.querySelector(
+            'link[rel="icon"][href="/yacht-spa/seagull.webp"]',
+          )
+          if (link) {
+            // Удаляем старые иконки, чтобы браузер не кэшировал неправильные
+            document.querySelectorAll('link[rel="icon"]').forEach((el) => {
+              if (
+                el.href.includes('seagull.webp') &&
+                !el.href.includes('/yacht-spa/')
+              ) {
+                el.remove()
+              }
+            })
+          }
+        }
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+.highlight { color: #e63946; font-weight: bold; animation: pulse 1s infinite; }
+.rounded-img { border-radius: 50%; box-shadow: 0 0 10px rgba(0,0,0,0.4); }
+body { background: #f8f9fa; }
+@keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
