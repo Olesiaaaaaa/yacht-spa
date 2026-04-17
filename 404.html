@@ -5,12 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yacht Shop</title>
     <script>
-      // 🔄 Перенаправляем все 404 на index.html, сохраняя путь для React Router
       ;(function () {
         const path = window.location.pathname
         const base = '/yacht-spa'
-
-        // Если путь не корень и не index.html — перенаправляем
         if (path !== base + '/' && path !== base + '/index.html') {
           window.location.replace(base + '/')
         }
