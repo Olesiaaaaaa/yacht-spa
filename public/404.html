@@ -2,13 +2,14 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <title>Yacht Spa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yacht Shop</title>
     <script>
       ;(function () {
-        const redirect = sessionStorage.redirect
-        delete sessionStorage.redirect
-        if (redirect && redirect !== location.href) {
-          history.replaceState(null, null, redirect)
+        const path = window.location.pathname
+        const base = '/yacht-spa'
+        if (path !== base + '/' && path !== base + '/index.html') {
+          window.location.replace(base + '/')
         }
       })()
     </script>

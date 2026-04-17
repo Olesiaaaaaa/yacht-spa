@@ -8,8 +8,8 @@ import {
 import HomePage from './pages/HomePage.jsx'
 import ContactPage from './pages/ContactPage.jsx'
 
-// 🎯 Умный basename: для локалки '/', для продакшена '/yacht-spa/'
-const basename = import.meta.env.PROD ? '/yacht-spa/' : '/'
+// ✅ Просто '/' для Netlify и localhost
+const basename = '/'
 
 function Navbar() {
   const loc = useLocation()
@@ -27,7 +27,6 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
         <Link className="navbar-brand p-0" to="/">
-          {/* 🖼️ Логотип: автоматический путь для любого окружения */}
           <img
             src={`${import.meta.env.BASE_URL}OR (1).png`}
             alt="Logo"
