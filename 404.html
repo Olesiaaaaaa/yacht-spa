@@ -4,16 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yacht Shop</title>
-    <link rel="icon" type="image/webp" href="/yacht-spa/seagull.webp" />
-    <script>
-      ;(function () {
-        const path = window.location.pathname
-        const base = '/yacht-spa'
-        if (path !== base + '/' && path !== base + '/index.html') {
-          window.location.replace(base + '/')
-        }
-      })()
-    </script>
+    <!-- ✅ Тот же путь к иконке -->
+    <link rel="icon" type="image/webp" href="/seagull.webp" />
   </head>
-  <body></body>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
