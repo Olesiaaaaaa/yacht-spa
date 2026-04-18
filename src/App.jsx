@@ -8,11 +8,13 @@ import {
 import HomePage from './pages/HomePage.jsx'
 import ContactPage from './pages/ContactPage.jsx'
 
-// ✅ Просто '/' для Netlify и localhost
-const basename = '/'
+// 🔹 Базовый путь для GitHub Pages
+const basename = '/yacht-spa/'
 
 function Navbar() {
   const loc = useLocation()
+
+  // 🔹 Функция стилей
   const btn = (path) => ({
     padding: '8px 16px',
     borderRadius: '6px',
@@ -35,14 +37,16 @@ function Navbar() {
           />
         </Link>
         <div className="ms-auto d-flex gap-2">
+          {/* Home */}
           <Link to="/" className={btn('/')}>
             Home
           </Link>
+
+          {/* ✅ Contact — теперь через Link, без target="_blank" */}
           <Link
             to="/contact"
-            className={btn('/contact')}
-            target="_blank"
-            rel="noopener noreferrer"
+            className={btn('/contact').className}
+            style={btn('/contact')}
           >
             Contact
           </Link>
