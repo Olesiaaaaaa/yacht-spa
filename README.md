@@ -12,7 +12,4 @@
 - Git, GitHub
 - Деплой: Netlify
 
-## 📦 Как запустить локально
-1. Клонируйте репозиторий: `git clone https://github.com/Olesiaaaaaa/yacht-spa.git`
-2. Установите зависимости: `npm install`
-3. Запустите сервер разработки: `gulp` (или ваша команда для запуска)
+
